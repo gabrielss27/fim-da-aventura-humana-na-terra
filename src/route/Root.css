@@ -1,0 +1,61 @@
+:root {
+    --dark-text: black;
+    --light-text: white;
+    --light-disc: #ffffaa;
+    --dark-disc: #0a0a0a;
+    --background: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+}
+
+.page {
+  animation: fadein 1s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.centered-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dark-text {
+  color: var(--dark-text);
+}
+
+.light-text {
+  color: var(--light-text);
+}
