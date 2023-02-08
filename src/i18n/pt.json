@@ -1,5 +1,45 @@
 {
-  "title": "O Fim da Aventura Humana na Terra",
-  "button_draw": "Sorteie o Futuro",
-  "button_choose": "Escolha o Futuro"
+  "title": {
+    "home": "O Fim da Aventura Humana na Terra",
+    "draw": "O Fim da Aventura Humana na Terra",
+    "choose": "O Fim da Aventura Humana na Terra"
+  },
+  "button": {
+    "draw": "Sorteie o Futuro",
+    "choose": "Escolha o Futuro",
+    "back": "Voltar"
+  },
+  "about": {
+    "draw": "O que as brutais forças do antropoceno reservam pra o futuro da Terra? As cartas estão divididas em forças destrutivas ambientais, geopolíticas e sociais. Sorteie 3 cartas e veja o que pode desencadear o fim da humanidade.",
+    "choose": "Qual das seguintes brutais forças do antropoceno você acredita que pode desencadear o fim da humanidade?\nEscolha apenas UMA e veja qual é a aposta das outras pessoas."
+  },
+  "cards": [
+    [
+      "Lorem Ipsum 0 0",
+      "Lorem Ipsum 0 1",
+      "Lorem Ipsum 0 2",
+      "Lorem Ipsum 0 3",
+      "Lorem Ipsum 0 4",
+      "Lorem Ipsum 0 5",
+      "Lorem Ipsum 0 6"
+    ],
+    [
+      "Lorem Ipsum 1 0",
+      "Lorem Ipsum 1 1",
+      "Lorem Ipsum 1 2",
+      "Lorem Ipsum 1 3",
+      "Lorem Ipsum 1 4",
+      "Lorem Ipsum 1 5",
+      "Lorem Ipsum 1 6"
+    ],
+    [
+      "Lorem Ipsum 2 0",
+      "Lorem Ipsum 2 1",
+      "Lorem Ipsum 2 2",
+      "Lorem Ipsum 2 3",
+      "Lorem Ipsum 2 4",
+      "Lorem Ipsum 2 5",
+      "Lorem Ipsum 2 6"
+    ]
+  ]
 }

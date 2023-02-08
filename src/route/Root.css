@@ -1,9 +1,10 @@
 :root {
-    --dark-text: black;
-    --light-text: white;
-    --light-disc: #ffffaa;
-    --dark-disc: #0a0a0a;
-    --background: black;
+  --dark-text: black;
+  --light-text: white;
+  --light-disc: #ffffff;
+  --light-halo: #feffc7;
+  --dark-disc: black;
+  --background: black;
 }
 
 * {
@@ -12,6 +13,36 @@
 
 a {
   text-decoration: none;
+}
+
+html {
+  font-size: 3vh;
+}
+
+@media only screen and ((max-width: 768px) or (max-height: 412px)) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+h1.small-text {
+  font-size: 1.2rem;
+}
+h2.small-text {
+  font-size: 1rem;
+}
+p.small-text {
+  font-size: 0.9rem;
 }
 
 #app-root {
@@ -33,14 +64,14 @@ a {
 }
 
 .centered-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .centered-text {
-    text-align: center;
+  text-align: center;
 }
 
 @keyframes fadein {

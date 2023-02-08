@@ -1,5 +1,44 @@
 {
-  "title": "The End of Human Journey on Earth",
-  "button_draw": "Draw the Future",
-  "button_choose": "Choose the Future"
+  "title": {
+    "home": "The End Human Journey on Earth",
+    "draw": "The End Human Journey on Earth",
+    "choose": "The End Human Journey on Earth"
+  },
+  "button": {
+    "draw": "Draw the Future",
+    "choose": "Choose the Future"
+  },
+  "about": {
+    "draw": "O que as brutais forças do antropoceno reservam pra o futuro da Terra? As cartas estão divididas em forças destrutivas ambientais, geopolíticas e sociais. Sorteie 3 cartas e veja o que pode desencadear o fim da humanidade.",
+    "choose": "Qual das seguintes brutais forças do antropoceno você acredita que pode desencadear o fim da humanidade?\nEscolha apenas UMA e veja qual é a aposta das outras pessoas."
+  },
+  "cards": [
+    [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum"
+    ],
+    [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum"
+    ],
+    [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum"
+    ]
+  ]
 }

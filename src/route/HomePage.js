@@ -4,11 +4,11 @@ import "./HomePage.css"
 
 const sides = ["draw", "choose"]
 
-export const HomePage = props => {
+export const HomePage = () => {
   const [lang, text] = useLocale()
 
   const openDarkDisc = (disc, direction) => {
-    const offset = `calc(${direction} * min(20vw, 20vh))`
+    const offset = `calc(${direction} * var(--disc-offset))`
     disc.style.left = offset
   }
 
@@ -27,8 +27,8 @@ export const HomePage = props => {
           {sides.map(side => (
             <div key={side} className="side-container">
               <Link to={`/${side}?lang=${lang}`}>
-                <h2 className="centered-text dark-text">
-                  {text["button_" + side]}
+                <h2 className="centered-text dark-text small-text">
+                  {text.button[side]}
                 </h2>
               </Link>
             </div>
@@ -36,7 +36,7 @@ export const HomePage = props => {
         </div>
         <div id="disc-dark" className="disc" onClick={onClickDarkDisc}>
           <div className="text-container">
-            <h1 className="centered-text light-text">{text.title}</h1>
+            <h1 className="centered-text light-text small-text">{text.title.home}</h1>
           </div>
         </div>
       </div>

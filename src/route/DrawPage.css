@@ -1,0 +1,97 @@
+:root {
+  --card-size: min(20vw, 20vh);
+}
+
+.draw-page {
+  padding: 0 10vw 0 10vw;
+}
+
+.draw-page > h1 {
+  margin: 0.3rem 0 0.3rem 0;
+}
+
+@media only screen and ((max-width: 768px) or (max-height: 412px)) {
+  .draw-page {
+    padding: 0 2vw 0 2vw;
+  }
+}
+
+.draw-card {
+  --rotation: 0rad;
+  --y-rotation: 0deg;
+  z-index: -1;
+  height: var(--card-size);
+  width: auto;
+  position: absolute;
+  transition: transform 0.4s ease-in;
+  transform: rotate(var(--rotation)) translate(0, calc(-1.3 * var(--card-size)))
+    rotateY(var(--y-rotation)) rotateY(1deg);
+  backface-visibility: hidden;
+}
+
+.draw-card:hover {
+  transform: rotate(var(--rotation)) translate(0, calc(-1.4 * var(--card-size)))
+    rotateY(var(--y-rotation)) rotateY(1deg);
+}
+
+.draw-card-selected,
+.draw-card-selected:hover {
+  transform: rotate(var(--rotation)) translate(0, calc(-1.5 * var(--card-size)))
+    rotateY(var(--y-rotation)) rotateY(1deg);
+}
+
+#draw-cards-container {
+  transform-style: preserve-3d;
+  position: relative;
+  width: calc(2 * var(--card-size));
+  height: calc(2 * var(--card-size));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#draw-cards-globe {
+  width: calc(2 * var(--card-size));
+  height: calc(2 * var(--card-size));
+  background-color: var(--dark-disc);
+  border: var(--light-disc) solid 2px;
+  border-radius: 100%;
+  transform: translateZ(10px);
+}
+
+#draw-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000a0;
+  opacity: 0;
+  transition: opacity 1s linear;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.draw-card-revealed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.draw-card-revealed {
+  width: 21vw;
+  height: auto;
+  margin-bottom: 1rem;
+  transform: scale(0.8);
+  transition: transform 2s 1s ease-out;
+}
+
+.back-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
