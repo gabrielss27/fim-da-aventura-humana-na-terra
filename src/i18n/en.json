@@ -2,7 +2,8 @@
   "title": {
     "home": "The End of Human Journey on Earth",
     "draw": "The End of Human Journey on Earth",
-    "choose": "The End of Human Journey on Earth"
+    "choose": "The End of Human Journey on Earth",
+    "error": "Oops!"
   },
   "button": {
     "draw": "Draw the Future",
@@ -11,7 +12,8 @@
   },
   "about": {
     "draw": "What do the brutal forces of anthropocene hold for the future of Earth? The cards are divided into environmental, geopolitical and social destructive forces. Draw 3 cards and see what might unleash the end of humanity.",
-    "choose": "Which of the following brutal forces of anthropocene do you believe might unleash the end of humanity?\nChoose only ONE and see what other people bet."
+    "choose": "Which of the following brutal forces of anthropocene do you believe might unleash the end of humanity?\nChoose only ONE and see what other people bet.",
+    "error": "An unexpected error has occurred."
   },
   "cards": [
     [

@@ -2,7 +2,8 @@
   "title": {
     "home": "O Fim da Aventura Humana na Terra",
     "draw": "O Fim da Aventura Humana na Terra",
-    "choose": "O Fim da Aventura Humana na Terra"
+    "choose": "O Fim da Aventura Humana na Terra",
+    "error": "Opa!"
   },
   "button": {
     "draw": "Sorteie o Futuro",
@@ -11,7 +12,8 @@
   },
   "about": {
     "draw": "O que as brutais forças do antropoceno reservam pra o futuro da Terra? As cartas estão divididas em forças destrutivas ambientais, geopolíticas e sociais. Sorteie 3 cartas e veja o que pode desencadear o fim da humanidade.",
-    "choose": "Qual das seguintes brutais forças do antropoceno você acredita que pode desencadear o fim da humanidade?\nEscolha apenas UMA e veja qual é a aposta das outras pessoas."
+    "choose": "Qual das seguintes brutais forças do antropoceno você acredita que pode desencadear o fim da humanidade?\nEscolha apenas UMA e veja qual é a aposta das outras pessoas.",
+    "error": "Um erro inesperado ocorreu."
   },
   "cards": [
     [
