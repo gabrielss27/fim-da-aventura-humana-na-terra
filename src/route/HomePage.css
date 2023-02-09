@@ -19,7 +19,7 @@
 
 #disc-light {
   background-color: var(--light-disc);
-  box-shadow: 0 0 min(10vw, 10vh) var(--light-halo);
+  box-shadow: 0 0 min(10vw, 10vh) min(4vw, 4vh) var(--light-halo);
   display: flex;
   flex-direction: row;
   align-items: stretch;

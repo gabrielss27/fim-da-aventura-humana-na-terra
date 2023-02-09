@@ -111,7 +111,7 @@ export const DrawPage = () => {
           )
         })}
       </div>
-      <Link className="back-button" to={-1}>
+      <Link className="back-button" to={-1} style={{opacity: overlay ? 1 : 0.5}}>
         <p className="light-text">&lt; {text.button.back}</p>
       </Link>
     </div>
