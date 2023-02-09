@@ -1,10 +1,9 @@
-import React, { Fragment, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useLocale } from "../i18n"
+import { nCardGroups, nCardsPerGroup } from "../provider/VoteProvider"
+import { Card } from "../component/Card"
 import "./DrawPage.css"
-
-const nCardGroups = 3
-const nCardsPerGroup = 7
 
 const cards = Array(nCardGroups)
   .fill()
@@ -59,40 +58,26 @@ export const DrawPage = () => {
           const key = `${group}-${card}`
           const rotation = (i / shuffledCards.length) * (Math.PI * 2)
           const isSelected = selected[group] === card
+          const extraClass = isSelected ? " draw-card-selected" : ""
           return (
-            <Fragment key={key}>
-              <img
-                className={`draw-card${
-                  isSelected ? " draw-card-selected" : ""
-                }`}
-                src={`/cards/${group}-back.png`}
-                alt=""
-                style={{
-                  "--rotation": `${rotation}rad`,
-                  "--y-rotation": revealed && isSelected ? "180deg" : "0deg"
-                }}
-                onClick={() => select(group, isSelected ? null : card)}
-              />
-              <img
-                className={`draw-card${
-                  isSelected ? " draw-card-selected" : ""
-                }`}
-                src={`/cards/${key}.png`}
-                alt=""
-                style={{
-                  "--rotation": `${rotation}rad`,
-                  "--y-rotation": revealed && isSelected ? "0deg" : "180deg"
-                }}
-                onClick={() => select(group, isSelected ? null : card)}
-              />
-            </Fragment>
+            <Card
+              key={key}
+              cardKey={key}
+              className={"draw-card" + extraClass}
+              rotation={rotation}
+              faceup={revealed && isSelected}
+              onClick={() => select(group, isSelected ? null : card)}
+            />
           )
         })}
         <div id="draw-cards-globe" />
       </div>
       <div
         id="draw-overlay"
-        style={{ display: revealed ? "flex" : "none", opacity: overlay ? 1 : 0 }}
+        style={{
+          display: revealed ? "flex" : "none",
+          opacity: overlay ? 1 : 0
+        }}
       >
         {selected.map((card, group) => {
           const key = `${group}-${card}`
@@ -102,7 +87,7 @@ export const DrawPage = () => {
                 className="draw-card-revealed"
                 src={`/cards/${key}.png`}
                 alt=""
-                style={{transform: `scale(${overlay ? 1 : 0.8})`}}
+                style={{ transform: `scale(${overlay ? 1 : 0.8})` }}
               />
               <h2 className="centered-text light-text">
                 {text.cards[group][card]}
@@ -111,7 +96,11 @@ export const DrawPage = () => {
           )
         })}
       </div>
-      <Link className="back-button" to={-1} style={{opacity: overlay ? 1 : 0.5}}>
+      <Link
+        className="back-button"
+        to={-1}
+        style={{ opacity: overlay ? 1 : 0.5 }}
+      >
         <p className="light-text">&lt; {text.button.back}</p>
       </Link>
     </div>

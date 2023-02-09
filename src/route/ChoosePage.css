@@ -1,0 +1,115 @@
+:root {
+  --globe-size: 16vw;
+  --globe-margin: 3vw;
+  --choose-card-gap: 3px;
+  --choose-card-width: calc(
+    (100vw - 2 * (var(--globe-margin) + var(--globe-size))) / 7 - 3 *
+      var(--choose-card-gap)
+  );
+  --choose-card-height: calc(1.4576271186440677 * var(--choose-card-width));
+}
+
+.choose-page {
+  white-space: pre-wrap;
+  align-items: stretch;
+}
+
+.choose-page > h1 {
+  margin: 0.3rem 0 0.3rem 0;
+}
+
+.choose-page > p {
+  margin: 0 2vw 0 2vw;
+}
+
+.choose-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.choose-globe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-globe {
+  width: var(--globe-size);
+  height: var(--globe-size);
+  border-radius: 100%;
+  border: white 2px solid;
+}
+
+.choose-globe-left {
+  margin-right: var(--globe-margin);
+}
+
+.choose-globe-right {
+  margin-left: var(--globe-margin);
+}
+
+.choose-cards-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-cards-subcontainer {
+  --rows: 3;
+  --cols: 7;
+  width: calc(
+    var(--choose-card-width) * var(--cols) + var(--choose-card-gap) *
+      (var(--cols) - 1)
+  );
+  height: calc(
+    var(--choose-card-height) * var(--rows) + var(--choose-card-gap) *
+      (var(--rows) - 1)
+  );
+  position: relative;
+}
+
+.choose-card-wrapper {
+  --i: 0;
+  --j: 0;
+  width: var(--choose-card-width);
+  height: var(--choose-card-height);
+  position: absolute;
+  transition: transform 2s 0.5s ease-out;
+  transform: translate(
+    calc(
+      var(--j) * var(--choose-card-width) + var(--j) * var(--choose-card-gap)
+    ),
+    calc(
+      var(--i) * var(--choose-card-height) + var(--i) * var(--choose-card-gap)
+    )
+  );
+}
+
+.choose-card {
+  width: var(--choose-card-width);
+  height: auto;
+  position: absolute;
+  transition: transform 0.4s ease-in;
+  transform: rotateY(var(--y-rotation));
+}
+
+.choose-card-vote {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s 2.5s linear;
+  top: calc(var(--choose-card-height) / 12);
+  background: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
+}
