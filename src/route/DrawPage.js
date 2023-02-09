@@ -57,7 +57,7 @@ export const DrawPage = () => {
       <div id="draw-cards-container">
         {shuffledCards.map(([group, card], i) => {
           const key = `${group}-${card}`
-          const rotation = (i / shuffledCards.length) * (Math.PI * 2) // - (Math.PI + 0.35) / 2
+          const rotation = (i / shuffledCards.length) * (Math.PI * 2)
           const isSelected = selected[group] === card
           return (
             <Fragment key={key}>
@@ -97,7 +97,7 @@ export const DrawPage = () => {
         {selected.map((card, group) => {
           const key = `${group}-${card}`
           return (
-            <div className="draw-card-revealed-container">
+            <div key={key} className="draw-card-revealed-container">
               <img
                 className="draw-card-revealed"
                 src={`/cards/${key}.png`}
