@@ -26,8 +26,8 @@ export class VoteProvider {
   }
 
   async vote(cardKey) {
-    this.mockedVotes[cardKey]++
     await sleep(1000)
+    this.mockedVotes[cardKey]++
     return this.mockedVotes
   }
 }

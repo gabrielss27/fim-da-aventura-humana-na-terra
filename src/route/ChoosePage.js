@@ -26,15 +26,7 @@ export const ChoosePage = () => {
   const [voted, setVoted] = useState(false)
   const [faceup, setFaceup] = useState(true)
   const [keyOrder, setKeyOrder] = useState(null)
-
-  useEffect(() => {
-    voteProvider
-      .getVotes()
-      .then(v => setVotes(v))
-      .catch(e => {
-        throw e
-      })
-  }, [])
+  const [hovered, setHovered] = useState(null)
 
   useEffect(() => {
     const order = {}
@@ -51,16 +43,33 @@ export const ChoosePage = () => {
   const vote = key => {
     if (votedFor != null) return
     setFaceup(false)
+    setHovered(null)
     setVotedFor(key)
-    voteProvider.vote(votedFor).then(vt => {
-      setVotes(vt)
-      setVoted(true)
-      setTimeout(() => setFaceup(true), 2500)
-    })
+    voteProvider
+      .vote(votedFor)
+      .then(vt => {
+        setVotes(vt)
+        setVoted(true)
+        setTimeout(() => setFaceup(true), 2500)
+      })
+      .catch(e => {
+        setVotedFor(null)
+        setFaceup(true)
+      })
+  }
+
+  const touchCard = (e, key) => {
+    if (hovered === key && votedFor === null) vote(key)
+    else setHovered(key)
+    e.preventDefault()
+    e.stopPropagation()
   }
 
   return (
-    <div className="page centered-page choose-page">
+    <div
+      className="page centered-page choose-page"
+      onClick={() => setHovered(null)}
+    >
       <h1 className="centered-text light-text">{text.title.choose}</h1>
       <p className="centered-text light-text">{text.about.choose}</p>
       <div className="choose-content">
@@ -73,13 +82,19 @@ export const ChoosePage = () => {
               const order = keyOrder == null || !voted ? index : keyOrder[key]
               const i = Math.floor(order / nCardsPerGroup)
               const j = order % nCardsPerGroup
+              const isHovered = hovered === key
+              const matches = key.match(/^(\d+)-(\d+)$/).slice(1)
+              const [group, card] = matches.map(v => +v)
+              const bottom = i === nCardGroups - 1 ? " choose-card-bottom" : ""
               return (
                 <div
                   key={key}
                   className="choose-card-wrapper"
                   style={{
                     "--i": i,
-                    "--j": j
+                    "--j": j,
+                    "--scale": isHovered ? 1.2 : 1,
+                    zIndex: isHovered ? 99 : 0
                   }}
                 >
                   <Card
@@ -87,16 +102,29 @@ export const ChoosePage = () => {
                     faceup={faceup}
                     rotation={0}
                     className="choose-card"
-                    onClick={() => vote(key)}
+                    onClick={e => touchCard(e, key)}
                   />
                   <p
-                    className="choose-card-vote centered-text light-text"
+                    className="choose-card-vote centered-text light-text small-text"
                     style={{
+                      display: votedFor != null ? "initial" : "none",
                       opacity: voted ? 1 : 0,
                       color: votedFor === key ? "yellow" : null
                     }}
                   >
                     {votes[key]}
+                  </p>
+                  <p
+                    className={
+                      "choose-card-name centered-text light-text small-text" +
+                      bottom
+                    }
+                    style={{
+                      display: isHovered ? "initial" : "none",
+                      opacity: isHovered ? 1 : 0
+                    }}
+                  >
+                    {text.cards[group][card]}
                   </p>
                 </div>
               )

@@ -76,10 +76,12 @@
 .choose-card-wrapper {
   --i: 0;
   --j: 0;
-  width: var(--choose-card-width);
+  --scale: 1;
+  z-index: 0;
+  width: calc(var(--choose-card-width) + var(--choose-card-gap));
   height: var(--choose-card-height);
   position: absolute;
-  transition: transform 2s 0.5s ease-out;
+  transition: transform 2s ease-out;
   transform: translate(
     calc(
       var(--j) * var(--choose-card-width) + var(--j) * var(--choose-card-gap)
@@ -95,16 +97,17 @@
   height: auto;
   position: absolute;
   transition: transform 0.4s ease-in;
-  transform: rotateY(var(--y-rotation));
+  transform: scale(var(--scale)) rotateY(var(--y-rotation));
 }
 
 .choose-card-vote {
   position: absolute;
+  opacity: 0;
   left: 0;
   right: 0;
-  opacity: 0;
-  transition: opacity 1s 2.5s linear;
   top: calc(var(--choose-card-height) / 12);
+  transform: scale(var(--scale)) translateY(calc(-1 * (var(--choose-card-height) / 6) * (var(--scale) - 1)));
+  transition: opacity 1s 2.5s linear, transform 0.4s ease-in;
   background: linear-gradient(
     to right,
     transparent,
@@ -112,4 +115,24 @@
     black 70%,
     transparent
   );
+}
+
+.choose-card-name {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: calc((1 + 1/12) * var(--choose-card-height));
+  background: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.choose-card-name.choose-card-bottom {
+  top: unset;
+  bottom: calc((1 + 1/12) * var(--choose-card-height)); 
 }
