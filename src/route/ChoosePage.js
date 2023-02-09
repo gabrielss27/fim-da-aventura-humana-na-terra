@@ -107,6 +107,13 @@ export const ChoosePage = () => {
           <div className="choose-globe choose-globe-right" />
         </div>
       </div>
+      <Link
+        className="back-button"
+        to={-1}
+        style={{ opacity: voted ? 1 : 0.5 }}
+      >
+        <p className="light-text">&lt; {text.button.back}</p>
+      </Link>
     </div>
   )
 }
