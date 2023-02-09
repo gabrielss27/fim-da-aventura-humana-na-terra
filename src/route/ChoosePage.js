@@ -7,6 +7,7 @@ import {
   nCardsPerGroup
 } from "../provider/VoteProvider"
 import { Card } from "../component/Card"
+import { Globe } from "../component/Globe"
 import "./ChoosePage.css"
 
 const cardsKeys = Array(nCardGroups)
@@ -46,7 +47,7 @@ export const ChoosePage = () => {
     setHovered(null)
     setVotedFor(key)
     voteProvider
-      .vote(votedFor)
+      .vote(key)
       .then(vt => {
         setVotes(vt)
         setVoted(true)
@@ -74,7 +75,11 @@ export const ChoosePage = () => {
       <p className="centered-text light-text">{text.about.choose}</p>
       <div className="choose-content">
         <div className="choose-globe-container">
-          <div className="choose-globe choose-globe-left" />
+          <Globe
+            size="var(--globe-size)"
+            duration="40s"
+            className="choose-globe choose-globe-left"
+          />
         </div>
         <div className="choose-cards-container">
           <div className="choose-cards-subcontainer">
@@ -86,6 +91,7 @@ export const ChoosePage = () => {
               const matches = key.match(/^(\d+)-(\d+)$/).slice(1)
               const [group, card] = matches.map(v => +v)
               const bottom = i === nCardGroups - 1 ? " choose-card-bottom" : ""
+              const isVoted = votedFor === key
               return (
                 <div
                   key={key}
@@ -105,11 +111,13 @@ export const ChoosePage = () => {
                     onClick={e => touchCard(e, key)}
                   />
                   <p
-                    className="choose-card-vote centered-text light-text small-text"
+                    className={
+                      "choose-card-vote centered-text light-text" +
+                      (isVoted ? " choose-voted" : "")
+                    }
                     style={{
                       display: votedFor != null ? "initial" : "none",
-                      opacity: voted ? 1 : 0,
-                      color: votedFor === key ? "yellow" : null
+                      opacity: voted ? 1 : 0
                     }}
                   >
                     {votes[key]}
@@ -132,7 +140,12 @@ export const ChoosePage = () => {
           </div>
         </div>
         <div className="choose-globe-container">
-          <div className="choose-globe choose-globe-right" />
+          <Globe
+            size="var(--globe-size)"
+            duration="40s"
+            offset="50%"
+            className="choose-globe choose-globe-right"
+          />
         </div>
       </div>
       <Link

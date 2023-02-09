@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useLocale } from "../i18n"
 import { nCardGroups, nCardsPerGroup } from "../provider/VoteProvider"
 import { Card } from "../component/Card"
+import { Globe } from "../component/Globe"
 import "./DrawPage.css"
 
 const cards = Array(nCardGroups)
@@ -70,7 +71,7 @@ export const DrawPage = () => {
             />
           )
         })}
-        <div id="draw-cards-globe" />
+        <Globe id="draw-cards-globe" size="2 * var(--card-size)" duration="40s" />
       </div>
       <div
         id="draw-overlay"

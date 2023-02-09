@@ -1,0 +1,28 @@
+.globe-container {
+    --size: 100px;
+    --offset: 0%;
+    --duration: 20s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(var(--size));
+    height: calc(var(--size));
+    overflow: hidden;
+}
+
+.globe-texture {
+    height: calc(var(--size));
+    min-height: calc(var(--size));
+    width: auto;
+    min-width: auto;
+    animation: globe-scroll var(--duration) linear 0s infinite;
+}
+
+@keyframes globe-scroll {
+    0% {
+        transform: translateX(calc(0% - var(--offset)));
+    }
+    100% {
+        transform: translateX(calc(-100% - var(--offset)));
+    }
+}

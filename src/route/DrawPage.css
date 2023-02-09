@@ -51,8 +51,8 @@
 }
 
 #draw-cards-globe {
-  width: calc(2 * var(--card-size));
-  height: calc(2 * var(--card-size));
+  /* width: calc(2 * var(--card-size));
+  height: calc(2 * var(--card-size)); */
   background-color: var(--dark-disc);
   border: var(--light-disc) solid 2px;
   border-radius: 100%;

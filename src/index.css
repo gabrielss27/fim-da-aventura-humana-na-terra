@@ -1,6 +1,6 @@
 @font-face {
   font-family: Romanus;
-  src: url(./fonts/romanus.otf) format("opentype");
+  src: url(./font/romanus.otf) format("opentype");
 }
 
 body {
