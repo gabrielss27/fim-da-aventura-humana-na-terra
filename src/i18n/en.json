@@ -1,8 +1,8 @@
 {
   "title": {
-    "home": "The End of Human Journey on Earth",
-    "draw": "The End of Human Journey on Earth",
-    "choose": "The End of Human Journey on Earth",
+    "home": "The End of Human Adventure on Earth",
+    "draw": "The End of Human Adventure on Earth",
+    "choose": "The End of Human Adventure on Earth",
     "error": "Oops!"
   },
   "button": {
@@ -11,37 +11,37 @@
     "back": "Back"
   },
   "about": {
-    "draw": "What do the brutal forces of anthropocene hold for the future of Earth? The cards are divided into environmental, geopolitical and social destructive forces. Draw 3 cards and see what might unleash the end of humanity.",
-    "choose": "Which of the following brutal forces of anthropocene do you believe might unleash the end of humanity?\nChoose only ONE and see what other people bet.",
+    "draw": "What do the brutal forces of the Anthropocene hold for Earth's future? The cards are divided into environmental, geopolitical and social destructive forces. Draw 3 cards and see what can trigger the end of humanity.",
+    "choose": "Which of the following brutal Anthropocene forces do you believe could trigger the end of humanity?\nChoose only ONE and see what other people's bet is.",
     "error": "An unexpected error has occurred."
   },
   "cards": [
     [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum"
+      "Extreme Droughts",
+      "Ice Melting",
+      "Increase in Floods",
+      "Increase in Wildfires",
+      "Extreme Heat Waves",
+      "Great Vulcanic Eruption",
+      "Increasing Carbon Emission"
     ],
     [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum"
+      "World Conflicts",
+      "Collapse of Multilateralism",
+      "Nuclear Weapons",
+      "Biological Weapons",
+      "Genocide for Resources",
+      "Totalitarian Rises",
+      "Border Crisis"
     ],
     [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum"
+      "Erosion of Social Cohesion",
+      "Involuntary Mass Migrations",
+      "Civil Wars",
+      "Pandemics",
+      "Scarcity of Resources",
+      "Disinformation War",
+      "Collapse of Algorithms"
     ]
   ]
 }
