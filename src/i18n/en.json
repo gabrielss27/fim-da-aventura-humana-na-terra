@@ -8,7 +8,8 @@
   "button": {
     "draw": "Draw the Future",
     "choose": "Choose the Future",
-    "back": "Back"
+    "back": "Back",
+    "language": "Language"
   },
   "about": {
     "draw": "What do the brutal forces of the Anthropocene hold for Earth's future? The cards are divided into environmental, geopolitical and social destructive forces. Draw 3 cards and see what can trigger the end of humanity.",

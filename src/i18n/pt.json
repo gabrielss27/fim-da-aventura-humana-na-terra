@@ -8,7 +8,8 @@
   "button": {
     "draw": "Sorteie o Futuro",
     "choose": "Escolha o Futuro",
-    "back": "Voltar"
+    "back": "Voltar",
+    "language": "Idioma"
   },
   "about": {
     "draw": "O que as brutais forças do antropoceno reservam pra o futuro da Terra? As cartas estão divididas em forças destrutivas ambientais, geopolíticas e sociais. Sorteie 3 cartas e veja o que pode desencadear o fim da humanidade.",
