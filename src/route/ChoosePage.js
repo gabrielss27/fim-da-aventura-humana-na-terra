@@ -107,7 +107,7 @@ export const ChoosePage = () => {
                     cardKey={key}
                     faceup={faceup}
                     rotation={0}
-                    className="choose-card"
+                    className={`choose-card card-group-${group}`}
                     onClick={e => touchCard(e, key)}
                   />
                   <p

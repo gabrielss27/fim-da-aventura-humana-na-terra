@@ -64,7 +64,7 @@ export const DrawPage = () => {
             <Card
               key={key}
               cardKey={key}
-              className={"draw-card" + extraClass}
+              className={`draw-card card-group-${group}` + extraClass}
               rotation={rotation}
               faceup={revealed && isSelected}
               onClick={() => select(group, isSelected ? null : card)}
@@ -85,12 +85,12 @@ export const DrawPage = () => {
           return (
             <div key={key} className="draw-card-revealed-container">
               <img
-                className="draw-card-revealed"
+                className={`draw-card-revealed card-group-${group}`}
                 src={`/cards/${key}.png`}
                 alt=""
                 style={{ transform: `scale(${overlay ? 1 : 0.8})` }}
               />
-              <h2 className="centered-text light-text">
+              <h2 className="centered-text light-text draw-card-revealed-text">
                 {text.cards[group][card]}
               </h2>
             </div>

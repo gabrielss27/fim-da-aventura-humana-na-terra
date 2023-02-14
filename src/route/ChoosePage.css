@@ -6,7 +6,7 @@
     (100vw - 2 * (var(--globe-margin) + var(--globe-size))) / 7 - 3 *
       var(--choose-card-gap)
   );
-  --choose-card-height: calc(1.4576271186440677 * var(--choose-card-width));
+  --choose-card-height: calc(1.7502645502645502 * var(--choose-card-width));
 }
 
 .choose-page {
@@ -98,6 +98,8 @@
   position: absolute;
   transition: transform 0.4s ease-in;
   transform: scale(var(--scale)) rotateY(var(--y-rotation));
+  border: 1px solid var(--light-text);
+  border-radius: 5px;
 }
 
 .choose-card-vote {
@@ -125,8 +127,8 @@
 .choose-card-name {
   position: absolute;
   opacity: 0;
-  left: 0;
-  right: 0;
+  left: -20%;
+  right: -20%;
   top: calc((1 + 1/12) * var(--choose-card-height));
   background: linear-gradient(
     to right,
