@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fim-da-aventura-humana-na-terra/static/css/main.9590b25d.css",
-    "main.js": "/fim-da-aventura-humana-na-terra/static/js/main.200164c9.js",
+    "main.js": "/fim-da-aventura-humana-na-terra/static/js/main.9c7bde99.js",
     "static/media/romanus.otf": "/fim-da-aventura-humana-na-terra/static/media/romanus.84637cc150e2d8cb09a4.otf",
     "static/media/world-map.svg": "/fim-da-aventura-humana-na-terra/static/media/world-map.dfc7cac1b484bdf09c3dd3f9669a2a1b.svg",
     "index.html": "/fim-da-aventura-humana-na-terra/index.html",
     "main.9590b25d.css.map": "/fim-da-aventura-humana-na-terra/static/css/main.9590b25d.css.map",
-    "main.200164c9.js.map": "/fim-da-aventura-humana-na-terra/static/js/main.200164c9.js.map"
+    "main.9c7bde99.js.map": "/fim-da-aventura-humana-na-terra/static/js/main.9c7bde99.js.map"
   },
   "entrypoints": [
     "static/css/main.9590b25d.css",
-    "static/js/main.200164c9.js"
+    "static/js/main.9c7bde99.js"
   ]
 }
