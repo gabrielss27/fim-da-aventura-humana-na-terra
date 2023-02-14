@@ -1,7 +1,7 @@
 {
   "name": "fim-da-aventura-humana-na-terra",
   "version": "0.1.0",
-  "homepage": "https://gabrielss27.github.io/fim-da-aventura-humana-na-terra",
+  "homepage": "https://gabrielss27.github.io/fim-da-aventura-humana-na-terra/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

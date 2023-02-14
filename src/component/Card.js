@@ -5,7 +5,7 @@ export const Card = ({ faceup, rotation, cardKey, style, ...props }) => {
   return (
     <Fragment>
       <img
-        src={`/cards/${group}-back.png`}
+        src={`${process.env.PUBLIC_URL}/cards/${group}-back.png`}
         alt=""
         style={{
             backfaceVisibility: "hidden",
@@ -16,7 +16,7 @@ export const Card = ({ faceup, rotation, cardKey, style, ...props }) => {
         {...props}
       />
       <img
-        src={`/cards/${cardKey}.png`}
+        src={`${process.env.PUBLIC_URL}/cards/${cardKey}.png`}
         alt=""
         style={{
           backfaceVisibility: "hidden",

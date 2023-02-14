@@ -6,10 +6,10 @@ import { ErrorPage } from "./ErrorPage"
 import { DrawPage } from "./route/DrawPage"
 import { ChoosePage } from "./route/ChoosePage"
 import { HomePage } from "./route/HomePage"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createMemoryRouter, RouterProvider } from "react-router-dom"
 // import reportWebVitals from "./reportWebVitals"
 
-const router = createBrowserRouter([
+const router = createMemoryRouter([
   {
     path: "/",
     element: <Root />,

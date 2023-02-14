@@ -86,7 +86,7 @@ export const DrawPage = () => {
             <div key={key} className="draw-card-revealed-container">
               <img
                 className={`draw-card-revealed card-group-${group}`}
-                src={`/cards/${key}.png`}
+                src={`${process.env.PUBLIC_URL}/cards/${key}.png`}
                 alt=""
                 style={{ transform: `scale(${overlay ? 1 : 0.8})` }}
               />
